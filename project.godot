@@ -26,8 +26,6 @@ SignalBus="*res://scripts/signal_bus.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/window_width_override=1024
-window/size/window_height_override=768
 
 [importer_defaults]
 
@@ -71,5 +69,5 @@ erase={
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
