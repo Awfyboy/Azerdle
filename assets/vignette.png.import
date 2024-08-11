@@ -15,7 +15,7 @@ dest_files=["res://.godot/imported/vignette.png-616bd0f74b406d55d24cc11a1e977d54
 
 [params]
 
-compress/mode=1
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

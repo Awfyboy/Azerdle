@@ -51,6 +51,7 @@ outline_color = Color(0.14902, 0.14902, 0.14902, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_3cyds"]
 line_spacing = 12.0
 font = ExtResource("4_45vqo")
+font_size = 18
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7bynu"]
 streams_count = 6
@@ -445,7 +446,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_somg6")
 text = "Wordle Zen by Awf Ibrahim (Awfy)
+
 Music: 'Gentle breeze', 'River of stars', 'Cosmic aurora', 'Dream nebula', 'Astronaut drift', 'Nature's Symphony' by Lof Cosmos from Pixabay.
+
 Sound effects by Ellr license under Attribution 4.0 International (CC BY 4.0)
 
 Version 1.0"

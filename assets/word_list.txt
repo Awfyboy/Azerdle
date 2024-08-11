@@ -2502,3 +2502,5 @@ wasps
 leeks
 peels
 maids
+mazes
+loots

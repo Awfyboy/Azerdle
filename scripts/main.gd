@@ -2573,12 +2573,13 @@ func _ready():
 	# one list was an array, the other was a text file
 	# I decided to combine them to make a more comprehensive list
 	# feel free to add more words if needed, simply add the word to the bottom of the text file
-	var file = FileAccess.open("res://assets/word_list.txt", FileAccess.READ)
-	while not file.eof_reached():
-		var line = file.get_line()
-		if not line in word_list:
-			word_list.append(line.to_lower())
-	file.close()
+	if FileAccess.file_exists("res://assets/word_list.txt"):
+		var file = FileAccess.open("res://assets/word_list.txt", FileAccess.READ)
+		while not file.eof_reached():
+			var line = file.get_line()
+			if not line in word_list:
+				word_list.append(line.to_lower())
+		file.close()
 	
 	initialize_round()
 	tween_wipe()
