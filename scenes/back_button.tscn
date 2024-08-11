@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwkxeg6f2r444"]
+
+[ext_resource type="FontFile" uid="uid://51nnvssc4vny" path="res://assets/LeagueSpartan-Bold.otf" id="1_lopm2"]
+[ext_resource type="Script" path="res://scripts/back_button.gd" id="2_7ppfn"]
+[ext_resource type="Texture2D" uid="uid://ckbhj3b3wno1a" path="res://assets/base_button_2.png" id="3_tnbid"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t0vk7"]
+resource_local_to_scene = true
+font = ExtResource("1_lopm2")
+font_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="Animation" id="Animation_eg3ov"]
+resource_name = "squish"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.9, 0.9), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1ap8f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_738gg"]
+_data = {
+"RESET": SubResource("Animation_1ap8f"),
+"squish": SubResource("Animation_eg3ov")
+}
+
+[node name="BackButton" type="Label"]
+custom_minimum_size = Vector2(64, 48)
+anchors_preset = -1
+anchor_right = 0.05
+anchor_bottom = 0.067
+offset_bottom = -0.240002
+pivot_offset = Vector2(32, 24)
+text = "<<"
+label_settings = SubResource("LabelSettings_t0vk7")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("2_7ppfn")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+action_mode = 0
+texture_normal = ExtResource("3_tnbid")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_738gg")
+}
+speed_scale = 6.0
+
+[connection signal="mouse_entered" from="TextureButton" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureButton" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]

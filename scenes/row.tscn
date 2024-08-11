@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://potup42bld23"]
+
+[ext_resource type="Script" path="res://scripts/row.gd" id="1_2dtsr"]
+[ext_resource type="PackedScene" uid="uid://lajlrl2ewg5o" path="res://scenes/block.tscn" id="1_2ix87"]
+
+[node name="Row" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.089
+offset_bottom = -0.0800018
+alignment = 1
+script = ExtResource("1_2dtsr")
+
+[node name="Block" parent="." instance=ExtResource("1_2ix87")]
+layout_mode = 2
+
+[node name="Block2" parent="." instance=ExtResource("1_2ix87")]
+layout_mode = 2
+
+[node name="Block3" parent="." instance=ExtResource("1_2ix87")]
+layout_mode = 2
+
+[node name="Block4" parent="." instance=ExtResource("1_2ix87")]
+layout_mode = 2
+
+[node name="Block5" parent="." instance=ExtResource("1_2ix87")]
+layout_mode = 2

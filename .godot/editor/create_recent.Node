@@ -1,0 +1,14 @@
+AnimationPlayer
+ColorRect
+Timer
+Control
+PanelContainer
+MarginContainer
+CenterContainer
+Label
+TextureButton
+VBoxContainer
+TextureRect
+Button
+HBoxContainer
+AudioStreamPlayer

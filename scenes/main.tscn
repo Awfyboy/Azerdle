@@ -1,0 +1,536 @@
+[gd_scene load_steps=40 format=3 uid="uid://bvkr1c7xqwdcj"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_cpvhk"]
+[ext_resource type="Texture2D" uid="uid://cx6vj6fun71m7" path="res://assets/hexagon.png" id="2_b2mr2"]
+[ext_resource type="PackedScene" uid="uid://potup42bld23" path="res://scenes/row.tscn" id="2_cna64"]
+[ext_resource type="Texture2D" uid="uid://bm54pulg1ipc5" path="res://assets/vignette.png" id="2_xh5ls"]
+[ext_resource type="Texture2D" uid="uid://cc4wlxpjvj2iy" path="res://assets/octogon.png" id="3_eok08"]
+[ext_resource type="Theme" uid="uid://dfw7lrrxmofku" path="res://assets/text_box_theme.tres" id="3_somg6"]
+[ext_resource type="FontFile" uid="uid://51nnvssc4vny" path="res://assets/LeagueSpartan-Bold.otf" id="4_45vqo"]
+[ext_resource type="Texture2D" uid="uid://dblhqqdvucvri" path="res://assets/dust.jpg" id="4_hkpnb"]
+[ext_resource type="Texture2D" uid="uid://bg6tb0xmsnh2g" path="res://assets/gradient.png" id="5_y61tn"]
+[ext_resource type="AudioStream" uid="uid://wmjp43e444xa" path="res://sounds/type1.mp3" id="9_inyl6"]
+[ext_resource type="AudioStream" uid="uid://i4d6lhqkyl2l" path="res://sounds/type2.mp3" id="10_11jrp"]
+[ext_resource type="AudioStream" uid="uid://clxe6enn15o4p" path="res://sounds/error.mp3" id="11_f41qj"]
+[ext_resource type="PackedScene" uid="uid://b6mgrhmu47gco" path="res://scenes/keyboard.tscn" id="11_yvcxw"]
+[ext_resource type="AudioStream" uid="uid://djcr6qnwqxhdn" path="res://sounds/delete1.mp3" id="12_ac7mh"]
+[ext_resource type="AudioStream" uid="uid://c5mhws7ipgvjk" path="res://sounds/delete2.mp3" id="13_8w1ra"]
+[ext_resource type="AudioStream" uid="uid://c5j3gn72pis7c" path="res://sounds/music/astronaut-drift-lofi-208860.mp3" id="13_gomht"]
+[ext_resource type="AudioStream" uid="uid://kkiu1nwso0oq" path="res://sounds/win.mp3" id="14_k150y"]
+[ext_resource type="AudioStream" uid="uid://chbcycp8qr0i1" path="res://sounds/music/cosmic-aurora-lofi-228368.mp3" id="14_khlph"]
+[ext_resource type="AudioStream" uid="uid://oxjgsibd72m0" path="res://sounds/confirm.mp3" id="15_6130v"]
+[ext_resource type="AudioStream" uid="uid://dab3m7hqg5cte" path="res://sounds/music/dream-nebula-lofi-228369.mp3" id="15_voy81"]
+[ext_resource type="AudioStream" uid="uid://b6ndeqnc8yhnn" path="res://sounds/music/gentle-breeze-lofi-156771.mp3" id="16_jto2f"]
+[ext_resource type="AudioStream" uid="uid://d4vw3htndj81" path="res://sounds/music/naturex27s-symphony-156040.mp3" id="17_hls0l"]
+[ext_resource type="AudioStream" uid="uid://eatoyd2mm33n" path="res://sounds/music/river-of-stars-lofi-228372.mp3" id="18_ke4n7"]
+[ext_resource type="AudioStream" uid="uid://qpgmh1uh4uvg" path="res://sounds/lose.mp3" id="18_vv7jk"]
+[ext_resource type="Texture2D" uid="uid://1for8xr6r5h4" path="res://assets/arrows.png" id="19_qdy5d"]
+[ext_resource type="PackedScene" uid="uid://myvh4o7j2pa4" path="res://scenes/more_button.tscn" id="21_o1chm"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5w4y0"]
+blend_mode = 3
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m4k33"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_hqt74"]
+line_spacing = 0.0
+font = ExtResource("4_45vqo")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kbwat"]
+font = ExtResource("4_45vqo")
+font_size = 48
+outline_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cbfxk"]
+font = ExtResource("4_45vqo")
+font_size = 48
+font_color = Color(0.537255, 1, 0.607843, 1)
+outline_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3cyds"]
+line_spacing = 12.0
+font = ExtResource("4_45vqo")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7bynu"]
+streams_count = 6
+stream_0/stream = ExtResource("13_gomht")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("14_khlph")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("15_voy81")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("16_jto2f")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("17_hls0l")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("18_ke4n7")
+stream_5/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_74osk"]
+playback_mode = 1
+random_pitch = 1.5
+streams_count = 2
+stream_0/stream = ExtResource("9_inyl6")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("10_11jrp")
+stream_1/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_urg4j"]
+random_pitch = 1.3
+streams_count = 1
+stream_0/stream = ExtResource("11_f41qj")
+stream_0/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_8ytqn"]
+playback_mode = 1
+random_pitch = 1.3
+streams_count = 2
+stream_0/stream = ExtResource("12_ac7mh")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("13_8w1ra")
+stream_1/weight = 1.0
+
+[sub_resource type="Animation" id="Animation_dubw6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ArrowLeftAnchor/ArrowLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowRightAnchor/ArrowRight:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(828, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4gf0w"]
+resource_name = "sine"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ArrowLeftAnchor/ArrowLeft:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(432, 0), Vector2(424, 0), Vector2(432, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowRightAnchor/ArrowRight:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(828, 0), Vector2(836, 0), Vector2(828, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c0mwv"]
+_data = {
+"RESET": SubResource("Animation_dubw6"),
+"sine": SubResource("Animation_4gf0w")
+}
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cpvhk")
+
+[node name="VisualsGroup" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="VisualsGroup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.47451, 0.486275, 0.466667, 1)
+metadata/_edit_lock_ = true
+
+[node name="Shape" type="TextureRect" parent="VisualsGroup"]
+modulate = Color(0.223529, 0.239216, 0.231373, 0.235294)
+layout_mode = 0
+offset_left = -224.0
+offset_top = -232.0
+offset_right = 176.0
+offset_bottom = 168.0
+pivot_offset = Vector2(200, 200)
+texture = ExtResource("3_eok08")
+
+[node name="Shape2" type="TextureRect" parent="VisualsGroup"]
+modulate = Color(0.223529, 0.239216, 0.231373, 0.235294)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -160.0
+offset_right = 224.0
+offset_bottom = 240.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(200, 200)
+texture = ExtResource("3_eok08")
+
+[node name="Shape3" type="TextureRect" parent="VisualsGroup"]
+modulate = Color(0.172549, 0.215686, 0.247059, 0.105882)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(400, 400)
+texture = ExtResource("2_b2mr2")
+
+[node name="Shape4" type="TextureRect" parent="VisualsGroup"]
+modulate = Color(0.270588, 0.317647, 0.32549, 0.235294)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -320.0
+offset_right = 320.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 320)
+texture = ExtResource("2_b2mr2")
+
+[node name="Vignette" type="TextureRect" parent="VisualsGroup"]
+modulate = Color(0.0313726, 0.196078, 0.454902, 0.14902)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xh5ls")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="CornerGradient" type="TextureRect" parent="VisualsGroup"]
+material = SubResource("CanvasItemMaterial_5w4y0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_y61tn")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="DustTexture" type="TextureRect" parent="VisualsGroup"]
+modulate = Color(0.172549, 0.203922, 0.337255, 0.192157)
+material = SubResource("CanvasItemMaterial_m4k33")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_hkpnb")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Wipe" type="ColorRect" parent="VisualsGroup"]
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.262745, 0.239216, 0.494118, 1)
+
+[node name="Modulate" type="ColorRect" parent="VisualsGroup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0470588, 0, 1, 0.235294)
+metadata/_edit_lock_ = true
+
+[node name="Guesses" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Row" parent="Guesses" instance=ExtResource("2_cna64")]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Row2" parent="Guesses" instance=ExtResource("2_cna64")]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Row3" parent="Guesses" instance=ExtResource("2_cna64")]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Row4" parent="Guesses" instance=ExtResource("2_cna64")]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Row5" parent="Guesses" instance=ExtResource("2_cna64")]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Row6" parent="Guesses" instance=ExtResource("2_cna64")]
+layout_mode = 2
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorBox" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.2
+offset_left = -1.0
+offset_top = -99.0
+offset_right = 1.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(1, 11)
+theme = ExtResource("3_somg6")
+label_settings = SubResource("LabelSettings_hqt74")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoundsText" type="Label" parent="."]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 40.0
+offset_right = 210.0
+offset_bottom = 101.0
+pivot_offset = Vector2(80, -40)
+text = "999"
+label_settings = SubResource("LabelSettings_kbwat")
+horizontal_alignment = 1
+
+[node name="WinsText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -48.0
+offset_right = 74.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(216, 78)
+text = "999"
+label_settings = SubResource("LabelSettings_cbfxk")
+horizontal_alignment = 1
+
+[node name="ArrowLeftAnchor" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -264.0
+offset_right = -624.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArrowLeft" type="TextureRect" parent="ArrowLeftAnchor"]
+layout_mode = 0
+offset_left = 432.0
+offset_right = 452.0
+offset_bottom = 64.0
+pivot_offset = Vector2(10, 32)
+texture = ExtResource("19_qdy5d")
+
+[node name="ArrowRightAnchor" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -264.0
+offset_right = -624.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ArrowRight" type="TextureRect" parent="ArrowRightAnchor"]
+layout_mode = 0
+offset_left = 828.0
+offset_right = 848.0
+offset_bottom = 64.0
+scale = Vector2(-1, 1)
+pivot_offset = Vector2(10, 32)
+texture = ExtResource("19_qdy5d")
+
+[node name="Keyboard" parent="." instance=ExtResource("11_yvcxw")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.844
+anchor_right = 0.5
+anchor_bottom = 0.844
+offset_top = -63.6802
+offset_bottom = -63.6802
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Info" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_somg6")
+text = "Wordle Zen by Awf Ibrahim (Awfy)
+Music: 'Gentle breeze', 'River of stars', 'Cosmic aurora', 'Dream nebula', 'Astronaut drift', 'Nature's Symphony' by Lof Cosmos from Pixabay.
+Sound effects by Ellr license under Attribution 4.0 International (CC BY 4.0)
+
+Version 1.0"
+label_settings = SubResource("LabelSettings_3cyds")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MoreButton" parent="." instance=ExtResource("21_o1chm")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = 80.0
+grow_horizontal = 0
+
+[node name="TimerGroup" type="Node" parent="."]
+
+[node name="ErrorTimer" type="Timer" parent="TimerGroup"]
+wait_time = 1.5
+one_shot = true
+
+[node name="RestartTimer" type="Timer" parent="TimerGroup"]
+wait_time = 2.0
+one_shot = true
+
+[node name="RelaxTimer" type="Timer" parent="TimerGroup"]
+wait_time = 5.0
+one_shot = true
+
+[node name="AudioGroup" type="Node" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="AudioGroup"]
+stream = SubResource("AudioStreamRandomizer_7bynu")
+volume_db = -6.0
+autoplay = true
+
+[node name="TypeSound" type="AudioStreamPlayer" parent="AudioGroup"]
+stream = SubResource("AudioStreamRandomizer_74osk")
+volume_db = 14.0
+
+[node name="ErrorSound" type="AudioStreamPlayer" parent="AudioGroup"]
+stream = SubResource("AudioStreamRandomizer_urg4j")
+volume_db = 4.0
+
+[node name="DeleteSound" type="AudioStreamPlayer" parent="AudioGroup"]
+stream = SubResource("AudioStreamRandomizer_8ytqn")
+
+[node name="WinSound" type="AudioStreamPlayer" parent="AudioGroup"]
+stream = ExtResource("14_k150y")
+volume_db = 3.0
+
+[node name="ConfirmSound" type="AudioStreamPlayer" parent="AudioGroup"]
+stream = ExtResource("15_6130v")
+volume_db = 10.0
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="AudioGroup"]
+stream = ExtResource("18_vv7jk")
+volume_db = 10.0
+
+[node name="AnimationGroup" type="Node" parent="."]
+
+[node name="ArrowsAnim" type="AnimationPlayer" parent="AnimationGroup"]
+libraries = {
+"": SubResource("AnimationLibrary_c0mwv")
+}
+autoplay = "sine"
+speed_scale = 2.0
+
+[connection signal="pressed" from="MoreButton" to="." method="_on_more_button_pressed"]
+[connection signal="timeout" from="TimerGroup/ErrorTimer" to="." method="_on_error_timer_timeout"]
+[connection signal="timeout" from="TimerGroup/RestartTimer" to="." method="_on_restart_timer_timeout"]
+[connection signal="timeout" from="TimerGroup/RelaxTimer" to="." method="_on_relax_timer_timeout"]
+[connection signal="finished" from="AudioGroup/Music" to="." method="_on_music_finished"]

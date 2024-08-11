@@ -1,0 +1,222 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6mgrhmu47gco"]
+
+[ext_resource type="PackedScene" uid="uid://bgqxqalifar0j" path="res://scenes/key_button.tscn" id="1_iif7k"]
+[ext_resource type="FontFile" uid="uid://51nnvssc4vny" path="res://assets/LeagueSpartan-Bold.otf" id="2_o0n64"]
+[ext_resource type="PackedScene" uid="uid://c71kj11s2qa6f" path="res://scenes/enter_button.tscn" id="3_e1su1"]
+[ext_resource type="PackedScene" uid="uid://cwkxeg6f2r444" path="res://scenes/back_button.tscn" id="4_gsmx3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jpaos"]
+resource_local_to_scene = true
+font = ExtResource("2_o0n64")
+font_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j634h"]
+resource_local_to_scene = true
+font = ExtResource("2_o0n64")
+font_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2abmr"]
+resource_local_to_scene = true
+font = ExtResource("2_o0n64")
+font_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2si47"]
+resource_local_to_scene = true
+font = ExtResource("2_o0n64")
+font_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ca85"]
+resource_local_to_scene = true
+font = ExtResource("2_o0n64")
+font_size = 12
+font_color = Color(0.14902, 0.14902, 0.14902, 1)
+
+[node name="Keyboard" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="Row" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -24.0
+offset_right = 178.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="KeyButton" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton2" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "w"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton3" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "e"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton4" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "r"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton5" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "t"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton6" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "y"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton7" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "u"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton8" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "i"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton9" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "o"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="KeyButton10" parent="Row" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "p"
+label_settings = SubResource("LabelSettings_jpaos")
+
+[node name="Row2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = 32.0
+offset_right = 178.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="KeyButton" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "a"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton2" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "s"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton3" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "d"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton4" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "f"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton5" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "g"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton6" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "h"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton7" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "j"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton8" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "k"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="KeyButton9" parent="Row2" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "l"
+label_settings = SubResource("LabelSettings_j634h")
+
+[node name="Row3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = 88.0
+offset_right = 178.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="BackButton" parent="Row3" instance=ExtResource("4_gsmx3")]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_2abmr")
+
+[node name="KeyButton" parent="Row3" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "z"
+label_settings = SubResource("LabelSettings_2si47")
+
+[node name="KeyButton2" parent="Row3" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "x"
+label_settings = SubResource("LabelSettings_2si47")
+
+[node name="KeyButton3" parent="Row3" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "c"
+label_settings = SubResource("LabelSettings_2si47")
+
+[node name="KeyButton4" parent="Row3" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "v"
+label_settings = SubResource("LabelSettings_2si47")
+
+[node name="KeyButton5" parent="Row3" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "b"
+label_settings = SubResource("LabelSettings_2si47")
+
+[node name="KeyButton6" parent="Row3" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "n"
+label_settings = SubResource("LabelSettings_2si47")
+
+[node name="KeyButton7" parent="Row3" instance=ExtResource("1_iif7k")]
+layout_mode = 2
+text = "m"
+label_settings = SubResource("LabelSettings_2si47")
+
+[node name="EnterButton" parent="Row3" instance=ExtResource("3_e1su1")]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_7ca85")
