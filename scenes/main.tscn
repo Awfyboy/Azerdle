@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bvkr1c7xqwdcj"]
+[gd_scene load_steps=39 format=3 uid="uid://bvkr1c7xqwdcj"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_cpvhk"]
 [ext_resource type="Texture2D" uid="uid://cx6vj6fun71m7" path="res://assets/hexagon.png" id="2_b2mr2"]
@@ -14,15 +14,13 @@
 [ext_resource type="AudioStream" uid="uid://clxe6enn15o4p" path="res://sounds/error.mp3" id="11_f41qj"]
 [ext_resource type="PackedScene" uid="uid://b6mgrhmu47gco" path="res://scenes/keyboard.tscn" id="11_yvcxw"]
 [ext_resource type="AudioStream" uid="uid://djcr6qnwqxhdn" path="res://sounds/delete1.mp3" id="12_ac7mh"]
+[ext_resource type="PackedScene" uid="uid://bu83x6x3mossv" path="res://scenes/mute_button.tscn" id="13_3jp4a"]
 [ext_resource type="AudioStream" uid="uid://c5mhws7ipgvjk" path="res://sounds/delete2.mp3" id="13_8w1ra"]
-[ext_resource type="AudioStream" uid="uid://c5j3gn72pis7c" path="res://sounds/music/astronaut-drift-lofi-208860.mp3" id="13_gomht"]
 [ext_resource type="AudioStream" uid="uid://kkiu1nwso0oq" path="res://sounds/win.mp3" id="14_k150y"]
 [ext_resource type="AudioStream" uid="uid://chbcycp8qr0i1" path="res://sounds/music/cosmic-aurora-lofi-228368.mp3" id="14_khlph"]
 [ext_resource type="AudioStream" uid="uid://oxjgsibd72m0" path="res://sounds/confirm.mp3" id="15_6130v"]
 [ext_resource type="AudioStream" uid="uid://dab3m7hqg5cte" path="res://sounds/music/dream-nebula-lofi-228369.mp3" id="15_voy81"]
-[ext_resource type="AudioStream" uid="uid://b6ndeqnc8yhnn" path="res://sounds/music/gentle-breeze-lofi-156771.mp3" id="16_jto2f"]
 [ext_resource type="AudioStream" uid="uid://d4vw3htndj81" path="res://sounds/music/naturex27s-symphony-156040.mp3" id="17_hls0l"]
-[ext_resource type="AudioStream" uid="uid://eatoyd2mm33n" path="res://sounds/music/river-of-stars-lofi-228372.mp3" id="18_ke4n7"]
 [ext_resource type="AudioStream" uid="uid://qpgmh1uh4uvg" path="res://sounds/lose.mp3" id="18_vv7jk"]
 [ext_resource type="Texture2D" uid="uid://1for8xr6r5h4" path="res://assets/arrows.png" id="19_qdy5d"]
 [ext_resource type="PackedScene" uid="uid://myvh4o7j2pa4" path="res://scenes/more_button.tscn" id="21_o1chm"]
@@ -48,19 +46,21 @@ font_size = 48
 font_color = Color(0.537255, 1, 0.607843, 1)
 outline_color = Color(0.14902, 0.14902, 0.14902, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcml6"]
+content_margin_left = 32.0
+content_margin_right = 32.0
+bg_color = Color(0.14902, 0.14902, 0.14902, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_3cyds"]
 line_spacing = 12.0
 font = ExtResource("4_45vqo")
 font_size = 18
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7bynu"]
-streams_count = 6
-stream_0/stream = ExtResource("13_gomht")
-stream_1/stream = ExtResource("14_khlph")
-stream_2/stream = ExtResource("15_voy81")
-stream_3/stream = ExtResource("16_jto2f")
-stream_4/stream = ExtResource("17_hls0l")
-stream_5/stream = ExtResource("18_ke4n7")
+streams_count = 3
+stream_0/stream = ExtResource("14_khlph")
+stream_1/stream = ExtResource("15_voy81")
+stream_2/stream = ExtResource("17_hls0l")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_74osk"]
 playback_mode = 1
@@ -335,13 +335,13 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.2
+anchor_top = 0.237
 anchor_right = 0.5
-anchor_bottom = 0.2
+anchor_bottom = 0.237
 offset_left = -1.0
-offset_top = -99.0
+offset_top = -114.36
 offset_right = 1.0
-offset_bottom = -77.0
+offset_bottom = -92.36
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(1, 11)
@@ -428,11 +428,11 @@ texture = ExtResource("19_qdy5d")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.844
+anchor_top = 0.725
 anchor_right = 0.5
-anchor_bottom = 0.844
-offset_top = -63.6802
-offset_bottom = -63.6802
+anchor_bottom = 0.725
+offset_top = 24.6398
+offset_bottom = 24.6398
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -445,9 +445,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_somg6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pcml6")
 text = "Wordle Zen by Awf Ibrahim (Awfy)
 
-Music: 'Gentle breeze', 'River of stars', 'Cosmic aurora', 'Dream nebula', 'Astronaut drift', 'Nature's Symphony' by Lof Cosmos from Pixabay.
+Music: 'Cosmic aurora', 'Dream nebula', 'Nature's Symphony' by Lof Cosmos from Pixabay.
 
 Sound effects by Ellr license under Attribution 4.0 International (CC BY 4.0)
 
@@ -466,6 +467,17 @@ offset_left = -80.0
 offset_top = 32.0
 offset_right = -32.0
 offset_bottom = 80.0
+grow_horizontal = 0
+
+[node name="MuteButton" parent="." instance=ExtResource("13_3jp4a")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 96.0
+offset_right = -32.0
+offset_bottom = 144.0
 grow_horizontal = 0
 
 [node name="TimerGroup" type="Node" parent="."]
@@ -506,7 +518,7 @@ volume_db = 3.0
 
 [node name="ConfirmSound" type="AudioStreamPlayer" parent="AudioGroup"]
 stream = ExtResource("15_6130v")
-volume_db = 10.0
+volume_db = 4.0
 
 [node name="LoseSound" type="AudioStreamPlayer" parent="AudioGroup"]
 stream = ExtResource("18_vv7jk")
@@ -522,6 +534,7 @@ autoplay = "sine"
 speed_scale = 2.0
 
 [connection signal="pressed" from="MoreButton" to="." method="_on_more_button_pressed"]
+[connection signal="pressed" from="MuteButton" to="." method="_on_mute_button_pressed"]
 [connection signal="timeout" from="TimerGroup/ErrorTimer" to="." method="_on_error_timer_timeout"]
 [connection signal="timeout" from="TimerGroup/RestartTimer" to="." method="_on_restart_timer_timeout"]
 [connection signal="timeout" from="TimerGroup/RelaxTimer" to="." method="_on_relax_timer_timeout"]

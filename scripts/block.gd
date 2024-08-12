@@ -1,6 +1,6 @@
 extends Control
 
-const base_pitch: float = 0.8
+const base_pitch: float = 0.6
 
 enum states {DEFAULT, READY, WRONG, CORRECT, HALF_CORRECT}
 

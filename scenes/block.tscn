@@ -205,7 +205,7 @@ texture = ExtResource("2_2x62s")
 
 [node name="FlipSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_foumq")
-pitch_scale = 0.8
+pitch_scale = 0.6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

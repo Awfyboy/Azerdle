@@ -31,10 +31,12 @@ SignalBus="*res://scripts/signal_bus.gd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
-window/size/window_width_override=1024
-window/size/window_height_override=768
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/stretch/scale=1.5
+window/handheld/orientation=1
 
 [importer_defaults]
 
@@ -78,5 +80,6 @@ erase={
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true

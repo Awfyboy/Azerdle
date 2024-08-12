@@ -5,6 +5,7 @@ const alphabet_list: Array[String] = [
 	'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
 	'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
 ]
+const music_volume: float = -6.0
 const rot_speed: float = 4.0
 const arrow_speed: float = 2.0
 const counter_speed: float = 0.6
@@ -32,6 +33,7 @@ const wipe_speed: float = 1.0
 @onready var more_button: TextureButton = $MoreButton
 @onready var relax_timer: Timer = $TimerGroup/RelaxTimer
 @onready var wipe: ColorRect = $VisualsGroup/Wipe
+@onready var mute_button: TextureButton = $MuteButton
 
 @onready var music: AudioStreamPlayer = $AudioGroup/Music
 @onready var type_sound: AudioStreamPlayer = $AudioGroup/TypeSound
@@ -2581,6 +2583,7 @@ func _ready():
 				word_list.append(line.to_lower())
 		file.close()
 	
+	music.volume_db = music_volume
 	initialize_round()
 	tween_wipe()
 	wins_text.hide()
@@ -2605,7 +2608,8 @@ func _unhandled_key_input(event):
 	if can_type:
 		if event is InputEventKey and event.is_pressed() and not event.is_echo():
 			var key_input = OS.get_keycode_string(event.key_label)
-			if event.is_action_pressed("quit"):
+			# can only quit application if in editor
+			if event.is_action_pressed("quit") and OS.has_feature("editor"):
 				get_tree().quit()
 			if event.is_action_pressed("erase"):
 				erase_letter()
@@ -2635,6 +2639,14 @@ func _on_more_button_pressed():
 		info.visible = not info.visible
 		can_type = not can_type
 		confirm_sound.play()
+
+
+func _on_mute_button_pressed():
+	confirm_sound.play()
+	if mute_button.is_mute:
+		music.volume_db = -80
+	else:
+		music.volume_db = music_volume
 
 
 func _on_error_timer_timeout():

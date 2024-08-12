@@ -1,3 +1,4 @@
+TextureButton
 AnimationPlayer
 ColorRect
 Timer
@@ -6,7 +7,6 @@ PanelContainer
 MarginContainer
 CenterContainer
 Label
-TextureButton
 VBoxContainer
 TextureRect
 Button
