@@ -10,7 +10,7 @@ This is a Godot v4.3 experiment project. This project contains:
 - Setup for Desktop, Mobile and Web (with Web being the target platform),
 - Setup with custom virtual keyboard,
 - Use of AudioStreamRandomiser to play random sounds at random pitches,
-- USe of Tweens and AnimationPlayer,
+- Use of Tweens and AnimationPlayer,
 - SignalBus as a singleton for global signal communication.
 
 Feel free to add more words to the list as I have to add some words manually.
