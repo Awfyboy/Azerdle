@@ -1,6 +1,6 @@
 # Wordle-Zen
- 
-![wordle zen logo](\.media\thumbnails\thumbnail.png)
+
+![wordle zen logo](/.media/thumbnails/thumbnail.png)
 Wordle: a game where you guess 5-letter words in 6 tries.
 This is a Godot v4.3 experiment project. This project contains:
 - Reading words from a word file and storing words to an Array,

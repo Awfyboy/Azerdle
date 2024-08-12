@@ -1,10 +1,10 @@
-res://assets/text_box_theme.tres::fd6eae48bbb1ea1978ba87e5d2dfb4a4::1723436089::res://.godot/exported/133200997/export-2c3876b59c46cf6e7e96c46da9403dab-text_box_theme.res
+res://assets/text_box_theme.tres::fd6eae48bbb1ea1978ba87e5d2dfb4a4::1723442139::res://.godot/exported/133200997/export-2c3876b59c46cf6e7e96c46da9403dab-text_box_theme.res
 res://scenes/back_button.tscn::7ffb85adf0846827d17450ce80e724d3::1723295611::res://.godot/exported/133200997/export-cd48f7c19e222a51f3727e706e69c950-back_button.scn
-res://scenes/block.tscn::9183314939d1a3190d6fca82e84a7ad5::1723439473::res://.godot/exported/133200997/export-ef63a898266488b4a55e5e40097e3f39-block.scn
+res://scenes/block.tscn::9183314939d1a3190d6fca82e84a7ad5::1723442225::res://.godot/exported/133200997/export-ef63a898266488b4a55e5e40097e3f39-block.scn
 res://scenes/enter_button.tscn::984eff9b142b063534915248370f8d45::1723295611::res://.godot/exported/133200997/export-20b8dfabdb57061223790f4a50b55804-enter_button.scn
 res://scenes/keyboard.tscn::88d17061f269bcf671f24d27d79d866c::1723295610::res://.godot/exported/133200997/export-6d23b3fc411c17b66c23414b100b758e-keyboard.scn
 res://scenes/key_button.tscn::4360234383142c4ad8a4672113bfaf02::1723435808::res://.godot/exported/133200997/export-4a78f889b83293cecffc507815d2e732-key_button.scn
-res://scenes/main.tscn::f683575a28f52077e6dcd51f116fee01::1723439473::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/main.tscn::f683575a28f52077e6dcd51f116fee01::1723442224::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
 res://scenes/more_button.tscn::a4c394d3ce09bf4e3a6aa1c4de21fcfe::1723438219::res://.godot/exported/133200997/export-05b826d2dda835e05c0740a7d94c0d52-more_button.scn
-res://scenes/row.tscn::6d24bdb83166d83401eaaf25017924e9::1723439473::res://.godot/exported/133200997/export-88eefd97b5bfb5a7dbedc90eb7178c22-row.scn
+res://scenes/row.tscn::6d24bdb83166d83401eaaf25017924e9::1723442225::res://.godot/exported/133200997/export-88eefd97b5bfb5a7dbedc90eb7178c22-row.scn
 res://scenes/mute_button.tscn::b43c018486a5150b3737a32ecb4aac00::1723438219::res://.godot/exported/133200997/export-0ec763cae91937826ea9dec426e2a6b9-mute_button.scn
