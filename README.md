@@ -1,5 +1,6 @@
 # Wordle-Zen
  
+![wordle zen logo](\.media\thumbnails\thumbnail.png)
 Wordle: a game where you guess 5-letter words in 6 tries.
 This is a Godot v4.3 experiment project. This project contains:
 - Reading words from a word file and storing words to an Array,
@@ -9,5 +10,6 @@ This is a Godot v4.3 experiment project. This project contains:
 - Setup with custom virtual keyboard,
 - Use of AudioStreamRandomiser to play random sounds at random pitches,
 - Tweens and AnimationPlayer uses cases,
-- SignalBus as a singleton for global signal communication,
+- SignalBus as a singleton for global signal communication.
+
 Feel free to add more words to the list as I have to add some words manually.
