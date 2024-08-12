@@ -23,7 +23,8 @@ func refresh_state():
 	update_visuals()
 
 
-# I have no idea why this works
+# give priority in the order correct>half_correct>wrong when changing state
+# lock the state if the state is already met in the given priority order
 func change_state(c_list: Array, h_list: Array, w_list: Array):
 	if text.to_lower() in c_list or state == states.CORRECT:
 		state = states.CORRECT

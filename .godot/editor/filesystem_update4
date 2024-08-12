@@ -1,9 +1,6 @@
 res://scenes/main.tscn
 res://assets/text_box_theme.tres
-res://scripts/block.gd
-res://scenes/block.tscn
-res://scripts/mute_button.gd
-res://scenes/mute_button.tscn
-res://scenes/more_button.tscn
+res://scripts/key_button.gd
 res://scripts/main.gd
 res://scenes/row.tscn
+res://scenes/block.tscn
