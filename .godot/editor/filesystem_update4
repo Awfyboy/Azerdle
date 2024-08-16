@@ -1,6 +1,4 @@
 res://scenes/main.tscn
 res://assets/text_box_theme.tres
-res://scripts/key_button.gd
-res://scripts/main.gd
 res://scenes/row.tscn
 res://scenes/block.tscn
