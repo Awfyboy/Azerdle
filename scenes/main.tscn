@@ -452,7 +452,7 @@ Music: 'Cosmic aurora', 'Dream nebula', 'Nature's Symphony' by Lof Cosmos from P
 
 Sound effects by Ellr license under Attribution 4.0 International (CC BY 4.0)
 
-Version 1.0"
+Version 1.1"
 label_settings = SubResource("LabelSettings_3cyds")
 horizontal_alignment = 1
 vertical_alignment = 1

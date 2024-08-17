@@ -56,7 +56,7 @@ var round_count: int = 1
 var win_count: int = 0
 
 
-# code for statring a round
+# code for starting a round
 func initialize_round():
 	SignalBus.game_started.emit()
 	pick_new_word()
