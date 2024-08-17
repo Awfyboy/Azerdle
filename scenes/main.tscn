@@ -446,7 +446,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_somg6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pcml6")
-text = "Wordle Zen by Awf Ibrahim (Awfy)
+text = "Azerdle by Awf Ibrahim (Awfy)
 
 Music: 'Cosmic aurora', 'Dream nebula', 'Nature's Symphony' by Lof Cosmos from Pixabay.
 

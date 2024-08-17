@@ -1,8 +1,7 @@
-# Wordle-Zen
+# Azerdle
 
-![wordle zen logo](/.media/thumbnails/thumbnail.png)
+![Azerdle logo](/.media/thumbnails/thumbnail.png)
 
-Wordle: a game where you guess 5-letter words in 6 tries.
 This is a Godot v4.3 experiment project. This project contains:
 - Reading words from a word file and storing words to an Array,
 - Determining matches for each letter and confirming correct guesses similar to Wordle,
@@ -14,4 +13,4 @@ This is a Godot v4.3 experiment project. This project contains:
 - SignalBus as a singleton for global signal communication.
 
 Feel free to add more words to the list as I have to add some words manually.
-Play Wordle Zen on Itch.io: https://awfy.itch.io/wordle-zen
+Play Azerdle on Itch.io: https://awfy.itch.io/wordle-zen

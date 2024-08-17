@@ -10,16 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Wordle Zen"
+config/name="Azerdle"
 config/version="1.1"
 config/tags=PackedStringArray("experiment", "learning")
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 boot_splash/bg_color=Color(0.262745, 0.239216, 0.494118, 1)
 boot_splash/show_image=false
-config/icon="res://wordle_icon.png"
-config/macos_native_icon="res://icon.icns"
-config/windows_native_icon="res://icon.ico"
+config/icon="res://azerdle_icon.png"
 
 [audio]
 
